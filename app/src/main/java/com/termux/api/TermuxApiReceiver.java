@@ -67,6 +67,9 @@ public class TermuxApiReceiver extends BroadcastReceiver {
                     CallLogAPI.onReceive(context, intent);
                 }
                 break;
+            case "Network":
+                NetworkAPI.onReceive(this, context, intent);
+                break;
             case "Clipboard":
                 ClipboardAPI.onReceive(this, context, intent);
                 break;
